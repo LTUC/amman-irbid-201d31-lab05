@@ -29,7 +29,9 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiply(a, b) {
-  let multiply = a*b;
+  let num1 = a;
+  let num2 = b;
+  let multiply = num1*num2;
   return [multiply,"The product of 5 and 9 is 45."];
 }
 //console.log(multiply(5,9));
@@ -52,11 +54,20 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) {
-  //eslint-disable-line
+  let num1 = a;
+  let num2= b;
+  let num3 = c;
+  let sum1=sum(num1,num2);
+  let sum2=sum(sum1[0],num3);
+
+  let multiply1= multiply(num1,num2);
+  let multiply2=multiply(multiply1[0],num3)
+  return [sum2[0],multiply2[0],"4 and 7 and 5 sum to 16.","The product of 4 and 7 and 5 is 140."]
 }
+//console.log(sumAndMultiply(4,7,5));
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
-// testSumAndMultiply(4,7,5);
+ testSumAndMultiply(4,7,5);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
