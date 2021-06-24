@@ -10,14 +10,15 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function sum(a, b) {
   let num1 = a;
-  let num2=b;
-  let sum = num1+num2;
+  let num2 = b;
+  let sum = num1 + num2;
   let msg = `The sum of ${num1} and ${num2} is ${sum}.`
   console.log(sum);
-  return [sum,msg];
-  
+  return [sum, msg];
+
   //eslint-disable-line
 }
+
 // Here is the test for sum(); uncomment it to run it
 testSum(4, 7);
 
@@ -33,17 +34,18 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiply(a, b) {
-  let num3=a;
-  let num4=b;
-  let multi=num3*num4;
-  let msg1=`The product of ${num3} and ${num4} is ${multi}.`;
-  console.log(multi);
-  return [multi,msg1];
+  let num3 = a;
+  let num4 = b;
+  let multiply = num3 * num4;
+  let msg1 = `The product of ${num3} and ${num4} is ${multiply}.`;
+  console.log(multiply);
+  return [multiply, msg1];
   //eslint-disable-line
 }
 
+
 // Here is the test for multiply(); uncomment it to run it
-testMultiply(5,9);
+testMultiply(5, 9);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -58,13 +60,35 @@ IMPORTANT DETAIL: You may not use the arithmetic operators + and * in this funct
 
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSumAndMultiply() function and see if the test passes.*/
 
-// Write your code here
+// Write your cod
+
 function sumAndMultiply(a, b, c) {
-  //eslint-disable-line
+  
+  let add = sum(sum(a,b)[0], c)[0];
+  console.log(add);
+
+  let product = multiply(multiply(a,b)[0], c)[0];
+  console.log(product);
+  let msg2 = `${a} and ${b} and ${c} sum to ${add}.`;
+  let msg3 = `The product of ${a} and ${b} and ${c} is ${product}.`;
+
+  return [add, product, msg2, msg3];
+
+
+
+
+
+
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
-// testSumAndMultiply(4,7,5);
+testSumAndMultiply(4, 7, 5);
+
+
+
+
+
+
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -82,8 +106,10 @@ Test this function by hand in the console to get it working, and when you think 
 let testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) {
-  //eslint-disable-line
+
 }
+//eslint-disable-line
+
 
 // Here is the test for sumArray(); uncomment it to run it
 
@@ -103,6 +129,7 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyArray(multArr) {
+
   //eslint-disable-line
 }
 
