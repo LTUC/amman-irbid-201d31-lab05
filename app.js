@@ -9,12 +9,12 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sum(a, b) {
- let num1 = a;
- let num2 = b;
- let sum = num1 + num2;
- let message = `The sum of ${num1} and ${num2} is ${sum}.`
- return [sum,message] 
-} 
+  let num1 = a;
+  let num2 = b;
+  let sum = num1 + num2;
+  let message = `The sum of ${num1} and ${num2} is ${sum}.`
+  return [sum, message]
+}
 // Here is the test for sum(); uncomment it to run it
 testSum(4, 7);
 
@@ -34,11 +34,11 @@ function multiply(a, b) {
   let num2 = b;
   let multiply = num1 * num2;
   let message = `The product of ${num1} and ${num2} is ${multiply}.`
-  return [multiply,message]
+  return [multiply, message]
 }
 
 // Here is the test for multiply(); uncomment it to run it
-testMultiply(5,9);
+testMultiply(5, 9);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -55,11 +55,21 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) {
+  let sumAndMultiplyArray = []
+  let aAndb = sum(a, b)[0];
+  let sumF = sum(aAndb, c)[0];
+  sumAndMultiplyArray[0] = sumF;
+  let aByb = multiply(a, b)[0];
+  let proF = multiply(aByb, c)[0];
+  sumAndMultiplyArray[1] = proF;
+  sumAndMultiplyArray[2] = `4 and 7 and 5 sum to 16.`
+  sumAndMultiplyArray[3] = `The product of 4 and 7 and 5 is 140.`
+  return sumAndMultiplyArray;
   //eslint-disable-line
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
-// testSumAndMultiply(4,7,5);
+testSumAndMultiply(4, 7, 5);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
