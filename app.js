@@ -91,12 +91,19 @@ Test this function by hand in the console to get it working, and when you think 
 let testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) {
+
+  let sumArrt= sumArr;
+  let sum = sumArrt.reduce((a, b)=>{
+    return a+b;
+  });
+let message=`${sumArrt[0]},${sumArrt[1]},${sumArrt[2]} was passed in as an array of numbers, and ${sum} is their sum.`;
+return[sum, message];
   //eslint-disable-line
 }
 
 // Here is the test for sumArray(); uncomment it to run it
 
-// testSumArray(testArray);
+testSumArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
