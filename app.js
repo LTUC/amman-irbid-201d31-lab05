@@ -156,7 +156,22 @@ Test this function by hand in the console to get it working, and when you think 
 let testDynamicArray = [1, 2, 3, 4, 5]; //eslint-disable-line
 
 function multiplyAnyArray(dynamicArray) {
-  //eslint-disable-line
+
+  let farahkArray =[];
+  let num = dynamicArray.length;
+  let produ;
+  let v = dynamicArray[0];
+  for(let i=1; i<num + 1; i++){
+    produ = multiply(v,i);
+    v = produ[0];
+    console.log('value is ${v}');
+
+  }
+  farahkArray[0]= v;
+  dynamicArray= dynamicArray.join(',');
+  farahkArray[1]=(`The numbers ${dynamicArray} have a product of ${v}.`)
+
+return farahkArray;
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
