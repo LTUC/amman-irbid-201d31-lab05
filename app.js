@@ -147,7 +147,7 @@ function multiplyAnyArray(dynamicArray) {
   
   
   let  x=1;
-  for(let i=0 ; i< arri.length;i++ )//5 
+  for(let i=0 ; i< arri.length;i++ )
   {   
      
    x=(x * arri[i]);
