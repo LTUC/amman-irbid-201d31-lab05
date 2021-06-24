@@ -86,7 +86,7 @@ Write a function called sumArray() that takes in an array of numbers as its sing
 
 IMPORTANT DETAIL: You may not use the arithmetic operator + in this function. To do addition, use your sum() function that you've already created. You're going to have to be resourceful to figure out how to do this. However, you may continue to use the + operator for string concatenation.
 
-Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSumArray() function and see if the test passes.*/
+///Test thisdhyyhdryrh function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSumArray() function and see if the test passes.*/
 
 // Write your code here
 let testArray = [2, 3, 4]; //eslint-disable-line
@@ -96,7 +96,7 @@ function sumArray(sumArr) {
   let tre1=sum(tre,testArray[2])[0];
   let note3='2,3,4 was passed in as an array of numbers, and 9 is their sum.'
   
-  return [tre1,note3]
+  return [tre1,note3];
 }
 
 // Here is the test for sumArray(); uncomment it to run it
