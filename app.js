@@ -87,13 +87,15 @@ Test this function by hand in the console to get it working, and when you think 
 let testArray = [2, 3, 4];
 
 function sumArray(sumArr) {
-  let passedaArray = [];
-  let aByb = sum((sumarr[0]), sumarr[1]);
-  aByb = aByb[0];
-  let sumF = sum(aByb, sumF[1])[0];
-  passedaArray[0] = sumF;
-  passedaArray[1] = "2,3,4 was passed in as an array of numbers, and 9 is their sum."
-  return passedaArray;
+  let problemforAraay = [];
+  let aAndb = sum((sumArr[0]),(sumArr[1]));
+  aAndb = aAndb[0];
+  let sumF = sum(aAndb, sumArr[2])[0];
+  problemforAraay[0] = sumF;
+  problemforAraay[1] = `2,3,4 was passed in as an array of numbers, and 9 is their sum.`
+
+  return problemforAraay;
+
 }
 
 // Here is the test for sumArray(); uncomment it to run it
