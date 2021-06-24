@@ -61,12 +61,22 @@ IMPORTANT DETAIL: You may not use the arithmetic operators + and * in this funct
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSumAndMultiply() function and see if the test passes.*/
 
 // Write your code here
+
 function sumAndMultiply(a, b, c) {
-  //eslint-disable-line
+ let number1= a;
+ let number2= b;
+ let number3= c;
+ let sum= number1 + number2 + number3;
+ let multi= number1 * number2 * number3;
+ let sum_return_message= `${number1} and ${number2} and ${number3} sum to ${sum}.`;
+ let multi_return_message= `The product of ${number1} and ${number2} and ${number3} is ${multi}.`;
+ return [sum, multi, sum_return_message, multi_return_message];
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
-// testSumAndMultiply(4,7,5);
+
+testSumAndMultiply(4,7,5);
+// console.log(sumAndMultiply(1, 5, 3));
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
