@@ -110,6 +110,7 @@ function sumArray(sumArr) {
   let add1 = sum(add,sumArr[2])[0];
   let msg3 =`2,3,4 was passed in as an array of numbers, and 9 is their sum.`
   return [add1,msg3];
+
 }
 //eslint-disable-line
 
