@@ -81,8 +81,8 @@ Test this function by hand in the console to get it working, and when you think 
 var testArray = [2, 3, 4]; //eslint-disable-line
 function sumArray([a,b,c]) {
 
-  var x = sum(a,b)[0];
-  var y = sum(x,c)[0];
+  let x = sum(a,b)[0];
+  let y = sum(x,c)[0];
   return [y ,  a + "," + b + "," + c + " was passed in as an array of numbers, and " + y + " is their sum."]
   
 
@@ -107,12 +107,16 @@ IMPORTANT DETAIL: You may not use the arithmetic operator * in this function. To
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyArray() function and see if the test passes.*/
 
 // Write your code here
-function multiplyArray(multArr) {
+function multiplyArray([a,b,c]) {
+  let x = multiply(a,b)[0];
+  let y = multiply(x,c)[0];
+  return [y , "The numbers "+a+","+b+","+c+" have a product of "+y+"."]
+  
   //eslint-disable-line
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(testArray);
+testMultiplyArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop.
 
