@@ -113,6 +113,7 @@ Test this function by hand in the console to get it working, and when you think 
 function multiplyArray(multArr) {let mult =1
   for (let j = 0; j <testArray.length; j++) {
     mult =mult*testArray[j]
+    console.log(mult);
     
   }
   let multiplyArray = [mult,"The numbers 2,3,4 have a product of 24."]
