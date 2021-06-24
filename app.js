@@ -98,8 +98,7 @@ function sumArray(sumArr) {
 
 testSumArray(testArray);
 
-  // for (let i=0; i<testArray.length;i++) {
-  //   testArray[testArray.length]=sum(testArray[i],testArray[i++])[0]}
+
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
 /////////////////////////////////////
@@ -137,8 +136,8 @@ Write a function called multiplyAnyArray() that takes an array of numbers of any
 
 "The numbers 1,2,3,4,5 have a product of 120."
 
-IMPORTANT DETAIL: You may not use the arithmetic operator * in this function. To do multiplication, use your multiply() function that you've already created. You're going to have to be resourceful to figure out how to do this. However, you may continue to use the + operator for string concatenation.
 
+IMPORTANT DETAIL: You may not use the arithmetic operator * in this function. To do multiplication, use your multiply() function that you've already created. You're going to have to be resourceful to figure out how to do this. However, you may continue to use the + operator for string concatenation.
 This function should be dynamic, accepting an array of any length.
 
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyAnyArray() function and see if the test passes.*/
@@ -146,11 +145,38 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 let testDynamicArray = [1, 2, 3, 4, 5]; //eslint-disable-line
 
+// function multiplyAnyArray(dynamicArray) {
+//   //eslint-disable-line
+//     let q6Array  = [];
+//   // determine length of array
+//   let nfe  = dynamicArray.length;
+//   // create a counter/container for final product
+//   let product; 
+//   // perform multiply function as needed to obtain final product USING ARRAY LENGTH
+//   let value  = dynamicArray[0];
+//   for (var i = 1; i < numberOfElements + 1; i++) {
+//     product = multiply(value, i);
+//     value = product[0];
+//     // console.log(`value is ${value}`);
+//   }
+//   // assign final product to index 0 of question6 array
+//   questionSixArray[0] = value;
+//   // assign string to index 1 of question6 array
+//   dynamicArray = dynamicArray.join(',');
+//   questionSixArray[1] = (`The numbers ${dynamicArray} have a product of ${value}.`)
+//   return questionSixArray;
+ 
+   
+// }
+
+
 function multiplyAnyArray(dynamicArray) {
-  //eslint-disable-line
+  let arrayProduct = 1; 
+  dynamicArray.forEach(element => arrayProduct = multiply(element, arrayProduct)[0]);
+  return [arrayProduct, `The numbers ${dynamicArray} have a product of ${arrayProduct}.`]
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyAnyArray(testDynamicArray);
+testMultiplyAnyArray(testDynamicArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. You're done! Submit the link to the repo following the instructions in Canvas.
