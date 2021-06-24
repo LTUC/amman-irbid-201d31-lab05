@@ -13,7 +13,7 @@ function sum(a, b) {
   let number1= a;
   let number2= b;
   let sum= number1 + number2;
-  let return_message= `The sum of ${number1} and ${number2} is ${sum}.`
+  let return_message= `The sum of ${number1} and ${number2} is ${sum}.`;
   return [sum, return_message];
 }
 
@@ -33,12 +33,19 @@ Write a function called multiply() that takes in two numbers as arguments and re
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiply() function and see if the test passes.*/
 
 // Write your code here
+
 function multiply(a, b) {
-  //eslint-disable-line
+  let number1= a;
+  let number2= b;
+  let multi= number1 * number2
+  let return_message= `The product of ${number1} and ${number2} is ${multi}.`;
+  return [multi, return_message];
 }
 
 // Here is the test for multiply(); uncomment it to run it
-// testMultiply(5,9);
+
+testMultiply(5,9);
+// console.log(multiply(5, 8));
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
