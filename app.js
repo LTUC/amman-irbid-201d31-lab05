@@ -63,11 +63,11 @@ function sumAndMultiply(a, b, c) {
   let num1=a;
   let num2=b;
   let num3=c;
-  let sum=num1+num2+num3;
-  let multiply = num1*num2*num3;
-  let message1= `${num1} and ${num2} and ${num3} sum to ${sum}.`
-  let message2= `The product of ${num1} and ${num2} and ${num3} is ${multiply}.`
-  return[sum,multiply,message1,message2] 
+  let sum3=sum(num1,sum(num2,num3)[0])[0]
+  let multiply3 = multiply(num1,multiply(num2,num3)[0])[0]
+  let message1= `${num1} and ${num2} and ${num3} sum to ${sum3}.`
+  let message2= `The product of ${num1} and ${num2} and ${num3} is ${multiply3}.`
+  return[sum3,multiply3,message1,message2] 
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
@@ -87,15 +87,19 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 let testArray = [2, 3, 4]; //eslint-disable-line
-
 function sumArray(sumArr) {
   //eslint-disable-line
+ let sum4=sumAndMultiply(testArray[0],testArray[1],testArray[2])[0]
+  return[sum4,"2,3,4 was passed in as an array of numbers, and 9 is their sum."]
+  
 }
 
 // Here is the test for sumArray(); uncomment it to run it
 
-// testSumArray(testArray);
+testSumArray(testArray);
 
+  // for (let i=0; i<testArray.length;i++) {
+  //   testArray[testArray.length]=sum(testArray[i],testArray[i++])[0]}
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
 /////////////////////////////////////
