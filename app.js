@@ -9,10 +9,15 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sum(a, b) {
-  //eslint-disable-line
+  let num1 =a;
+  let num2 =b;
+  let sum =num1 + num2;
+  let message =`The sum of ${num1} and ${num2} is ${sum}.`
+  return [sum, message];
+
 }
 // Here is the test for sum(); uncomment it to run it
-// testSum(4, 7);
+ testSum(4, 7);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -26,11 +31,15 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiply(a, b) {
-  //eslint-disable-line
+let num1 =a;
+let num2 =b;
+let multiply = num1 * num2;
+let message =`The product of ${num1} and ${num2} is ${multiply}.`
+return [multiply, message];
 }
 
 // Here is the test for multiply(); uncomment it to run it
-// testMultiply(5,9);
+ testMultiply(5,9);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -47,11 +56,24 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) {
-  //eslint-disable-line
+ 
+ 
+  let sumAndMultiplyArray =[]
+ 
+ let fa = sum (a,b)[0];
+ let sum2 = sum(fa,c)[0];
+sumAndMultiplyArray[0]= sum2;
+ let re = multiply(a,b)[0];
+ let multiply2 = multiply(re,c)[0];
+ sumAndMultiplyArray[1]= multiply2;
+ sumAndMultiplyArray[2]=`${a} and ${b} and ${c} sum to ${sum2}.`
+ sumAndMultiplyArray[3]=`The product of ${a} and ${b} and ${c} is ${multiply2}.`
+  
+  return sumAndMultiplyArray;
 }
-
+ 
 // Here is the test for sumAndMultiply(); uncomment it to run it
-// testSumAndMultiply(4,7,5);
+testSumAndMultiply(4,7,5);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -69,12 +91,20 @@ Test this function by hand in the console to get it working, and when you think 
 let testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) {
-  //eslint-disable-line
+  let farahArray = [];
+  let za = sum((sumArr[0]),(sumArr[1]));
+  za = za[0];
+  let summ = sum(za,sumArr[2])[0];
+  farahArray[0]=summ;
+  farahArray[1]= `${sumArr[0]},${sumArr[1]},${sumArr[2]} was passed in as an array of numbers, and ${summ} is their sum.`
+  return farahArray;
 }
+
+
 
 // Here is the test for sumArray(); uncomment it to run it
 
-// testSumArray(testArray);
+ testSumArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -90,11 +120,19 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyArray(multArr) {
-  //eslint-disable-line
+  let faArray =[];
+  let fz= multiply((multArr[0]),(multArr[1]));
+  fz = fz[0];
+  let prod= multiply(fz,multArr[2]);
+  prod= prod[0];
+  faArray[0]= prod;
+  faArray[1]= `The numbers ${multArr[0]},${multArr[1]},${multArr[2]} have a product of 24.`
+  return faArray;
 }
 
+
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(testArray);
+ testMultiplyArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop.
 
@@ -118,7 +156,22 @@ Test this function by hand in the console to get it working, and when you think 
 let testDynamicArray = [1, 2, 3, 4, 5]; //eslint-disable-line
 
 function multiplyAnyArray(dynamicArray) {
-  //eslint-disable-line
+
+  let farahkArray =[];
+  let num = dynamicArray.length;
+  let produ;
+  let v = dynamicArray[0];
+  for(let i=1; i<num + 1; i++){
+    produ = multiply(v,i);
+    v = produ[0];
+    console.log('value is ${v}');
+
+  }
+  farahkArray[0]= v;
+  dynamicArray= dynamicArray.join(',');
+  farahkArray[1]=(`The numbers ${dynamicArray} have a product of ${v}.`)
+
+return farahkArray;
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
