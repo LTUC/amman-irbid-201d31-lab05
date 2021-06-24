@@ -121,7 +121,7 @@ function multiplyArray(multArr) {
 }
 
 
-
+// 1
 // Here is the test for multiplyArray(); uncomment it to run it
 testMultiplyArray(testArray);
 
