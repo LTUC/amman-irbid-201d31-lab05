@@ -11,7 +11,7 @@ Test this function by hand in the console to get it working, and when you think 
 function sum(a, b) {
   let n1 = a;
   let n2 = b;
-  let sum = n1 +n2;
+  let sum = n1 +n2 ;
   let massege = `The sum of ${n1} and ${n2} is ${sum}.`
   return [sum,massege];
 }
@@ -33,7 +33,7 @@ function multiply(a, b) {
   let n1 = a;
   let n2 = b;
   let multi = n1 * n2;
-  let massege = `"The product of ${n1} and ${n2} is ${multi}.`
+  let massege = `The product of ${n1} and ${n2} is ${multi}.`
   return [multi,massege]
 }
 
@@ -55,11 +55,21 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) {
-  //eslint-disable-line
+  let n1 = a;
+  let n2 = b;
+  let n3 = c;
+
+  let newSum = sum(sum(a,b)[0],c)[0];
+  let newMultiply = multiply(multiply(a,b)[0],c)[0]
+  let massege = `${n1} and ${n2} and ${n3} sum to ${newSum}.`
+  let massege1 = `The product of ${n1} and ${n2} and ${n3} is ${newMultiply}.`
+ 
+ 
+  return[newSum ,newMultiply,massege,massege1]
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
-// testSumAndMultiply(4,7,5);
+testSumAndMultiply(4,7,5);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -77,7 +87,7 @@ Test this function by hand in the console to get it working, and when you think 
 let testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) {
-  //eslint-disable-line
+  let sumArray
 }
 
 // Here is the test for sumArray(); uncomment it to run it
