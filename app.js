@@ -102,7 +102,7 @@ function sumArray(sumArr) {
 
 // Here is the test for sumArray(); uncomment it to run it
 
-testSumArray(testArray);
+//testSumArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -118,11 +118,17 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyArray(multArr) {
-  //eslint-disable-line
+  let num1=multArr[0];
+  let num2=multArr[1];
+  let num3=multArr[2];  
+  let multiply1=multiply(num1,num2)[0];
+  let totelMultiply=multiply(multiply1,num3)[0];
+  let massage=`The numbers ${num1},${num2},${num3} have a product of ${totelMultiply}.`;
+  return [totelMultiply, massage] 
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(testArray);
+testMultiplyArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop.
 
