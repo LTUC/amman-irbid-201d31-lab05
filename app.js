@@ -27,13 +27,13 @@ Write a function called multiply() that takes in two numbers as arguments and re
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiply() function and see if the test passes.*/
 
 // Write your code here
+// Write your code here
 function multiply(num1, num2) {
   let mul1=num1*num2;
   let second_array = [mul1,`The product of ${num1} and ${num2} is ${mul1}.`];
   return second_array;
   //eslint-disable-line
 }
-
 // Here is the test for multiply(); uncomment it to run it
 testMultiply();
 
@@ -52,11 +52,18 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) {
+  let absum =sum(a,b)[0];
+  let totalsum=sum(absum,c)[0];
+  let abmult=multiply(a,b)[0];
+  let totalmult=multiply(abmult,c)[0];
+  let third_array=[totalsum,totalmult,a+" and "+b+" and "+c+" sum to "+totalsum+".","The product of "+a+" and "+b+" and "+c+" is "+totalmult+"."];
+  return third_array;
   //eslint-disable-line
 }
 
+
 // Here is the test for sumAndMultiply(); uncomment it to run it
-// testSumAndMultiply(4,7,5);
+testSumAndMultiply();
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
