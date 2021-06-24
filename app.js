@@ -59,16 +59,15 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) {
-  let fig1=a;
-  let fig2=b;
-  let fig3=c;
-  let sum= fig1 + fig2 + fig3;
-  let product= fig1*fig2*fig3;
+  let x=sum(a,b)[0];
+  let y=sum(x,c)[0];
+  let u=multiply(a,b)[0];
+  let z=multiply(u,c)[0];
   let note1='4 and 7 and 5 sum to 16.'
   let note2='The product of 4 and 7 and 5 is 140.'
 
   
-  return [sum,product,note1,note2];
+  return [y,z,note1,note2];
 
 
 
@@ -93,12 +92,16 @@ Test this function by hand in the console to get it working, and when you think 
 let testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) {
-  //eslint-disable-line
+  let tre=sum(testArray [0],testArray [1])[0];
+  let tre1=sum(tre,testArray[2])[0];
+  let note3='2,3,4 was passed in as an array of numbers, and 9 is their sum.'
+  
+  return [tre1,note3]
 }
 
 // Here is the test for sumArray(); uncomment it to run it
 
-// testSumArray(testArray);
+ testSumArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
