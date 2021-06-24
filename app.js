@@ -110,7 +110,6 @@ function sumArray(sumArr) {
   let add1 = sum(add,sumArr[2])[0];
   let msg3 =`2,3,4 was passed in as an array of numbers, and 9 is their sum.`
   return [add1,msg3];
-  
 
 }
 //eslint-disable-line
@@ -134,12 +133,16 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyArray(multArr) {
+  let product = multiply(multArr[0],multArr[1])[0];
+  let product1= multiply(product,multArr[2])[0];
+  
+  return [product1,'The numbers 2,3,4 have a product of 24.']
 
   //eslint-disable-line
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(testArray);
+testMultiplyArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop.
 
