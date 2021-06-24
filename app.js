@@ -33,11 +33,17 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiply(a, b) {
+  let num3=a;
+  let num4=b;
+  let multi=num3*num4;
+  let msg1=`The product of ${num3} and ${num4} is ${multi}.`;
+  console.log(multi);
+  return [multi,msg1];
   //eslint-disable-line
 }
 
 // Here is the test for multiply(); uncomment it to run it
-// testMultiply(5,9);
+testMultiply(5,9);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
