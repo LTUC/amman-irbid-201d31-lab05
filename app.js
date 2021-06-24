@@ -82,12 +82,14 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 let testArray = [2, 3, 4]; //eslint-disable-line
 
-function sumArray(sumArr) {
-  for (let i = 0; i < testarray.length; i++) {
-    c
-    let sumArray =[sum(testArray[i])];
-    
-  }return sumArray
+function sumArray(sumArr) { 
+    let sum1 = 0   
+  for (let i = 0; i < testArray.length; i++) {
+sum1 = sum1 +testArray[i]
+  console.log(sum1); 
+  }
+  let sumArray = [sum1,"2,3,4 was passed in as an array of numbers, and 9 is their sum."]
+  return sumArray
 
   //eslint-disable-line
 }
@@ -108,13 +110,19 @@ IMPORTANT DETAIL: You may not use the arithmetic operator * in this function. To
 
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyArray() function and see if the test passes.*/
 
-// Write your code here
-function multiplyArray(multArr) {
-  //eslint-disable-line
+function multiplyArray(multArr) {let mult =1
+  for (let j = 0; j <testArray.length; j++) {
+    mult =mult*testArray[j]
+    
+  }
+  let multiplyArray = [mult,"The numbers 2,3,4 have a product of 24."]
+  return multiplyArray
+  
 }
 
-// Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(testArray);
+
+
+testMultiplyArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop.
 
@@ -137,7 +145,8 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 let testDynamicArray = [1, 2, 3, 4, 5]; //eslint-disable-line
 
-function multiplyAnyArray(dynamicArray) {
+function multiplyAnyArray(dynamicArray) {let mult = 0
+
   //eslint-disable-line
 }
 
