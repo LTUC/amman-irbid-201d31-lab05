@@ -10,7 +10,7 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function sum(num1, num2) {
   let sum1=num1+num2;
-  let first_array = [sum1,"The sum of 4 and 7 is 11."];
+  let first_array = [sum1,`The sum of ${num1} and ${num2} is ${sum1}.`];
   return first_array;
 }
 // Here is the test for sum(); uncomment it to run it
@@ -27,12 +27,15 @@ Write a function called multiply() that takes in two numbers as arguments and re
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiply() function and see if the test passes.*/
 
 // Write your code here
-function multiply(a, b) {
+function multiply(num1, num2) {
+  let mul1=num1*num2;
+  let second_array = [mul1,`The product of ${num1} and ${num2} is ${mul1}.`];
+  return second_array;
   //eslint-disable-line
 }
 
 // Here is the test for multiply(); uncomment it to run it
-// testMultiply(5,9);
+testMultiply();
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
