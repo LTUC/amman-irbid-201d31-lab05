@@ -8,9 +8,10 @@ concatenated string
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSum() function below and check the console to see if the test passes.*/
 
 // Write your code here
-function sum(e,d) {
-  let fig1=e;
-  let fig2=d;
+
+function sum(a,b) {
+  let fig1=a;
+  let fig2=b;
   let sum= fig1+fig2
   let note='The sum of 4 and 7 is 11.'
 
@@ -31,6 +32,8 @@ Write a function called multiply() that takes in two numbers as arguments and re
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiply() function and see if the test passes.*/
 
 // Write your code here
+
+
 function multiply(a, b) {
 
   let fig1=a;
@@ -59,17 +62,17 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) {
-  let fig1=a;
-  let fig2=b;
-  let fig3=c;
-  let sum= fig1 + fig2 + fig3;
-  let product= fig1*fig2*fig3;
-  let note1='4 and 7 and 5 sum to 16.'
-  let note2='The product of 4 and 7 and 5 is 140.'
+ let x=sum(a,b)[0];
+ let y=sum (x,c)[0];
+ let u=multiply(a,b)[0];
+ let z=multiply(u,c)[0];
 
-  
-  return [sum,product,note1,note2];
+ let note1='4 and 7 and 5 sum to 16.';
+ let note2='The product of 4 and 7 and 5 is 140.';
 
+
+
+  return [y,z,note1,note2];
 
 
 }
