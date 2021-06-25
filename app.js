@@ -73,19 +73,6 @@ function sumAndMultiply(a, b, c) {
   
   return [y,z,note1,note2];
 
- let x=sum(a,b)[0];
- let y=sum (x,c)[0];
- let u=multiply(a,b)[0];
- let z=multiply(u,c)[0];
-
- let note1='4 and 7 and 5 sum to 16.';
- let note2='The product of 4 and 7 and 5 is 140.';
-
-
-
-
-  return [y,z,note1,note2];
-
 
 }
 
@@ -171,10 +158,15 @@ Test this function by hand in the console to get it working, and when you think 
 let testDynamicArray = [1, 2, 3, 4, 5]; //eslint-disable-line
 
 function multiplyAnyArray(dynamicArray) {
-  //eslint-disable-line
-}
+  let num6=multiply(testDynamicArray[0],testDynamicArray[1])[0];
+  let num7=multiply(num6,testDynamicArray[2])[0];
+  let num8=multiply(num7,testDynamicArray[3])[0];
+  let num9=multiply(num8,testDynamicArray[4])[0];
 
+  let note5='The numbers 1,2,3,4,5 have a product of 120.'
+  return [num9,note5]
+}
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyAnyArray(testDynamicArray);
+testMultiplyAnyArray(testDynamicArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. You're done! Submit the link to the repo following the instructions in Canvas.
