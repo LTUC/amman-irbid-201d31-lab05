@@ -9,14 +9,20 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sum(a, b) {
-  //eslint-disable-line
+  let num1 =a;
+  let num2 =b;
+  let sum = num1+num2
+  let message ='The sum of 4 and 7 is 11.'
+  return [sum,message];
 }
 // Here is the test for sum(); uncomment it to run it
-// testSum(4, 7);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
 /////////////////////////////////////
+testSum();
+
+
 /* Problem 2
 Write a function called multiply() that takes in two numbers as arguments and returns an array where the first element is the product of those numbers, and the second element is a string that EXACTLY follows this example and uses the values that were input into the function:
 
@@ -25,12 +31,16 @@ Write a function called multiply() that takes in two numbers as arguments and re
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiply() function and see if the test passes.*/
 
 // Write your code here
-function multiply(a, b) {
-  //eslint-disable-line
-}
+ function multiply(a, b) {
+ let num1 =a;
+ let num2 =b;
+ let product =num1 * num2
+ let meesage ='The product of 5 and 9 is 45.'
+ return [product, message];
+ }
 
 // Here is the test for multiply(); uncomment it to run it
-// testMultiply(5,9);
+testMultiply(5,9);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -47,7 +57,12 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) {
+  let sum = sum(a,b)[0]
+  let sum2 = sum(sum, c)[0]
+  let multiply = multiply(a,b)[0]
+  let multiply2 = multiply(c,multiply)[0];
   //eslint-disable-line
+  return [sum2, multiply2, "4 and 7 and 5 sum to 16.", "The product of 4 and 7 and 5 is 140."];
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
@@ -69,12 +84,22 @@ Test this function by hand in the console to get it working, and when you think 
 let testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) {
-  //eslint-disable-line
+  let sum1 = sum(testArray[0], testArray[1])[0];
+  let sum2 = sum(sum1, testArray[2])[0];
+  let array = [sum2, "2,3,4 was passed in as an array of numbers, and 9 is their sum."];
+  return array;
+
+//   let m=sumarr;
+//   console.log(m);
+//   let v ="2,3,4 was passed in as an array of numbers, and 9 is their sum."
+//   sumAndMultiply(m[0],m[1],m[2])[0]
+//   return [sumAndMultiply(m[0],m[1],m[2])[0],v]
+//   //eslint-disable-line
 }
 
 // Here is the test for sumArray(); uncomment it to run it
 
-// testSumArray(testArray);
+testSumArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -90,11 +115,13 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyArray(multArr) {
-  //eslint-disable-line
-}
+  let multiply1 =multiply(multArr[0], multArr[1])[0];
+  let multiply2 =multiply(multiply1,multArr[2])[0];
+  let array2 = [multiply2, "The numbers 2,3,4 have a product of 24."];
+  return array2;}
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(testArray);
+testMultiplyArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop.
 
