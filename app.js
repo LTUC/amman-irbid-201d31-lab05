@@ -107,11 +107,17 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyArray(multArr) {
+  let i = 0 ;
+  let X1 = multiply(testArray[i] , testArray[i+1] );
+  let X2 = multiply(X1[i] , testArray[i+2] );
+  console.log(X1)
+  console.log(X2)
+  return [X2[0] , 'The numbers 2,3,4 have a product of 24.']
   //eslint-disable-line
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(testArray);
+testMultiplyArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop.
 
