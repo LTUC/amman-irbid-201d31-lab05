@@ -86,7 +86,14 @@ Test this function by hand in the console to get it working, and when you think 
 let testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) {
-//eslint-disable-line
+  let sumarr=testArray.reduce((accumlator,item)=>{
+    return accumlator+item
+  },0)
+  let num1=testArray[0]
+  let num2=testArray[1]
+  let num3=testArray[2]
+  let str=`${num1},${num2},${num3} was passed in as an array of numbers, and ${sumarr} is their sum.`
+  return [sumarr,str]
 }
 // sumArray(testArray)
 // Here is the test for sumArray(); uncomment it to run it
