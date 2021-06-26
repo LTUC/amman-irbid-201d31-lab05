@@ -118,6 +118,7 @@ function multiplyArray(multArr) {
   let [num1,num2,num3]=[...testArray]
   let str2=`The numbers ${num1},${num2},${num3} have a product of ${multi_arr[0]}.`
   return [multi_arr[0],str2]
+  
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
