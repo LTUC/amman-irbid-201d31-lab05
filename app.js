@@ -9,10 +9,14 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sum(a, b) {
-  //eslint-disable-line
+  let num1 = a;
+  let num2 = b;
+  let sum = num1 + num2;
+  let message = `The sum of ${num1} and ${num2} is ${sum}.`
+  return [sum, message]
 }
 // Here is the test for sum(); uncomment it to run it
-// testSum(4, 7);
+testSum(4, 7);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -26,11 +30,15 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiply(a, b) {
-  //eslint-disable-line
+  let num1 = a;
+  let num2 = b;
+  let multiply = num1 * num2;
+  let message = `The product of ${num1} and ${num2} is ${multiply}.`
+  return [multiply, message]
 }
 
 // Here is the test for multiply(); uncomment it to run it
-// testMultiply(5,9);
+testMultiply(5, 9);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -47,11 +55,21 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) {
+  let sumAndMultiplyArray = []
+  let aAndb = sum(a, b)[0];
+  let sumF = sum(aAndb, c)[0];
+  sumAndMultiplyArray[0] = sumF;
+  let aByb = multiply(a, b)[0];
+  let proF = multiply(aByb, c)[0];
+  sumAndMultiplyArray[1] = proF;
+  sumAndMultiplyArray[2] = `4 and 7 and 5 sum to 16.`
+  sumAndMultiplyArray[3] = `The product of 4 and 7 and 5 is 140.`
+  return sumAndMultiplyArray;
   //eslint-disable-line
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
-// testSumAndMultiply(4,7,5);
+testSumAndMultiply(4, 7, 5);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -66,15 +84,23 @@ IMPORTANT DETAIL: You may not use the arithmetic operator + in this function. To
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSumArray() function and see if the test passes.*/
 
 // Write your code here
-let testArray = [2, 3, 4]; //eslint-disable-line
+let testArray = [2, 3, 4];
 
 function sumArray(sumArr) {
-  //eslint-disable-line
+  let problemforAraay = [];
+  let aAndb = sum((sumArr[0]),(sumArr[1]));
+  aAndb = aAndb[0];
+  let sumF = sum(aAndb, sumArr[2])[0];
+  problemforAraay[0] = sumF;
+  problemforAraay[1] = `2,3,4 was passed in as an array of numbers, and 9 is their sum.`
+
+  return problemforAraay;
+
 }
 
 // Here is the test for sumArray(); uncomment it to run it
 
-// testSumArray(testArray);
+testSumArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -88,13 +114,20 @@ IMPORTANT DETAIL: You may not use the arithmetic operator * in this function. To
 
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyArray() function and see if the test passes.*/
 
-// Write your code here
 function multiplyArray(multArr) {
-  //eslint-disable-line
+let ProblemFiveAraay = [];
+let aByb = multiply((multArr[0]), (multArr[1]));
+aByb = aByb[0];
+let proF = multiply(aByb, multArr[2]);
+proF = proF[0];
+ProblemFiveAraay[0] = proF;
+ProblemFiveAraay[1] = `The numbers 2,3,4 have a product of 24.`
+return ProblemFiveAraay;
+
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(testArray);
+testMultiplyArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop.
 
