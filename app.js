@@ -157,7 +157,8 @@ function multiplyAnyArray([a,b,c,d,e,f]) {
   let a5 = f;
   let x = multiply(multiply(a,b)[0],c)[0];
   let x1 = multiply(multiply(x,c)[0],d)[0];
-  let x2 = multiply(multiply(x1,d)[0],f)[0];
+  let x2 = multiply(multiply(x1,d)[0],e)[0];
+  let x3 = multiply(multiply(x2,e)[0],f)[0];
   let m =`The numbers ${a1},${a2},${a3},${a4},${a5} have a product of ${x2}.`;
   return[x2,m];
 }
