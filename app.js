@@ -61,7 +61,6 @@ function sumAndMultiply(a, b, c) {
   let num3 = c;
   let sum = num1 + num2 + num3;
   let multiply = num1 * num2 * num3;
-                     4 and 7 and 5 sum to 16.
   let message1 = `${num1} and ${num2} and ${num3} sum to ${sum}.`
   let message2 = `The product of ${num1} and ${num2} and ${num3} is ${multiply}.`
   return [sum,multiply,message1,message2]
